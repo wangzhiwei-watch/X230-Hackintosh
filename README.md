@@ -2,7 +2,7 @@
 
 macOS for ThinkPad X230 (Mojave & Catalina)
 
-March 2, 2020 - Clover bootloader (OpenCore soon)
+March 19, 2020 - Clover bootloader
 
 ![0About](./screenshot/info.png)
 
@@ -90,10 +90,11 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 ## Post-Installation
 
+### DOWNLOAD HERE: [EFI](https://github.com/banhbaoxamlan/X230-Hackintosh/releases/latest)
+
 ### 1. Tools needed
 
-- Clover Installer (<https://github.com/CloverHackyColor/CloverBootloader/releases)>
-- OpenCore (soon)
+- Clover 
 
 ### 2. Kexts used
 
