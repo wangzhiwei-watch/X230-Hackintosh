@@ -2,7 +2,6 @@
 
 macOS for ThinkPad X230 (Mojave & Catalina)
 
-March 19, 2020 - Clover bootloader
 
 ![0About](./screenshot/info.png)
 
@@ -39,19 +38,21 @@ March 19, 2020 - Clover bootloader
 
 ### 3. Hardware
 
-|Compenent|Reference|
-|---|---|
-|CPU|Intel Core i5-3320M vPro|
-|RAM|DDR3L 12GB Bus 1600MHz|
-|GFX|Intel HD Graphics 4000|
-|Sound|Realtek ALC269|
-|Display|12.5" IPS LCD|
-|WIFI|Intel Centrino® Advanced-N 6205|
+| Specifications      | Detail                                      |
+| ------------------- | ------------------------------------------- |
+| Processor           | Intel Core i5-3320M                         |
+| Memory              | Samsung DDR3L 12GB Bus 1600MHz              |
+| Hard Disk           | Samsung SSD P851                            |
+| Integrated Graphics | Intel HD Graphics 4000                      |
+| Monitor             | LG LP125WH2-SLB3 HD IPS 1366x768            |
+| Sound Card          | Realtek ALC269                              |
+| Wireless Card       | Intel Centrino Advanced-N 6205              |
+
 
 #### What will work
 
 - Power Management (C/P-States, Fan RPM, Speedstep, etc)
-- HD Intel Graphic Card (HD4000)
+- Intel HD 4000 Graphics QE/CI
 - Sleep (Sleep from menu + lid close sleep)
 - Camera
 - Ethernet
@@ -82,7 +83,7 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 - Atheros AR5B95 (Lenovo Part number: 20002357) - 802.11a/b/g/n 2.4 GHz (Drop support 10.14 and newer)
 - Dell DW1510 – 802.11a/b/g/n 2.4 GHz & 5 GHz (Broadcom) (Drop support 10.15)
 - Dell DW1515 – 802.11a/b/g/n 2.4 GHz & 5 GHz (Atheros)
-- Dell DW1550 – 802.11ac 2.4 GHz & 5 GHz (Broadcom) (Recommended, natively 10.14 10.15)
+- Dell DW1550 – 802.11ac 2.4 GHz & 5 GHz (Broadcom) (Recommended)
 
 ## Installation
 
@@ -98,6 +99,7 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 ### 2. Kexts used
 
+- AirportBrcmFixup.kext (requires for DW1550)
 - ACPIBatteryManager.kext
 - ACPIPoller.kext
 - AppleALC.kext
@@ -110,7 +112,7 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 - Lilu.kext
 - USBPorts.kext
 - VoodooPS2Controller.kext
-- VoodooSDHC.kext
+- VoodooSDHC.kext (or [Sinetek-rtsx](<https://github.com/cholonam/Sinetek-rtsx/releases>) if VoodooSDHC not working)
 - WhateverGreen.kext
 
 ### 3. Patched
@@ -130,6 +132,10 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 ### DW1510 on Catalina
 
 - Copy IO80211Family.kext on on my EFI to CLOVER/kexts/10.15/
+
+### Atheros AR5B95 on Mojave and Catalina
+
+- Copy IO80211Family.kext High Serria to CLOVER/kexts/10.14/ or CLOVER/kexts/10.15/
 
 ## Support me
 
