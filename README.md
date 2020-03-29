@@ -2,9 +2,6 @@
 
 macOS for ThinkPad X230 (Mojave & Catalina)
 
-
-![0About](./screenshot/info.png)
-
 ## Pre-Installation
 
 ### 1. Update BIOS!!!
@@ -64,10 +61,6 @@ macOS for ThinkPad X230 (Mojave & Catalina)
 - SD Card Reader
 - Bluetooth
 
-![0Display](./screenshot/display.png)
-![0Power](./screenshot/power.png)
-![0Bluetooth](./screenshot/bluetooth.png)
-
 
 #### Not working
 
@@ -93,29 +86,25 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 ### DOWNLOAD HERE: [EFI](https://github.com/banhbaoxamlan/X230-Hackintosh/releases/latest)
 
-### 1. Tools needed
+### Kexts
 
-- Clover 
+| Kext                      | Use                       | Download                  |
+| ------------------------- | ------------------------- | ------------------------- |
+| AirportBrcmFixup          | An open source kernel extension providing a set of patches required for non-native Airport Broadcom Wi-Fi cards | https://github.com/acidanthera/AirportBrcmFixup/releases |
+| ACPIBatteryManager        | Implements an Advanced Configuration and Power Interface (ACPI) based battery manager kernel extension (kext/driver) for non-Apple laptops running MacOS | https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/ |
+| ACPIPoller                | Implements an ACPI-based polling kernel extension for MacOS | https://bitbucket.org/RehabMan/os-x-acpi-poller/downloads/ |
+| AppleALC                  | An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications | https://github.com/acidanthera/AppleALC/releases         |
+| BrcmPatchRAM              | Broadcom PatchRAM driver for MacOS | https://github.com/acidanthera/BrcmPatchRAM/releases |
+| EFICheckDisabler          | Disable EFI Check | https://github.com/RehabMan/hack-tools/tree/master/kexts | https://github.com/acidanthera/AirportBrcmFixup/releases |
+| FakeSMC                   | An open source SMC device driver/emulator | https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/ |
+| IntelMausi                | Intel Ethernet LAN driver for macOS | https://github.com/acidanthera/IntelMausi/releases |
+| Lilu                      | Arbitrary kext and process patching on macOS | https://github.com/acidanthera/Lilu/releases |
+| USBPorts                  | Maps the USB ports| in this repository |
+| VoodooPS2Controller       | Enables PS/2 Support on macOS | https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/ |
+| VoodooSDHC                | Enables SD Card Support on macOS | https://github.com/OSXLatitude/EDP/tree/master/kextpacks/USB/VoodooSDHC |
+| WhateverGreen             | Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs | https://github.com/acidanthera/WhateverGreen/releases |
 
-### 2. Kexts used
-
-- AirportBrcmFixup.kext (requires for DW1550)
-- ACPIBatteryManager.kext
-- ACPIPoller.kext
-- AppleALC.kext
-- BrcmBluetoothInjector.kext (requires for BrcmPatchRAM3.kext)
-- BrcmFirmwareData.kext
-- BrcmPatchRAM2.kext (BrcmPatchRAM3.kext for Catalina)
-- EFICheckDisabler.kext
-- FakeSMC.kext
-- IntelMausi.kext
-- Lilu.kext
-- USBPorts.kext
-- VoodooPS2Controller.kext
-- VoodooSDHC.kext (or [Sinetek-rtsx](<https://github.com/cholonam/Sinetek-rtsx/releases>) if VoodooSDHC not working)
-- WhateverGreen.kext
-
-### 3. Patched
+### Patched
 
 - Copy patch to /ACPI/patched/
 
@@ -141,3 +130,9 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 - Paypal: <https://www.paypal.me/thebinhluong0519>
 - Ethereum: 0xC202255193D95979A7C937aA3CB5220FAD9E2aBe
+
+## Credits
+
+- [Apple](https://www.apple.com) for macOS
+- [Acidanthera](https://github.com/acidanthera) for all the kexts/utilities that they made
+- [Rehabman](https://github.com/RehabMan/) for the patches and guides and kexts
