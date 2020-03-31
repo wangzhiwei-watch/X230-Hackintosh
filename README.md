@@ -1,12 +1,12 @@
 # X230-Hackintosh
 
-macOS for ThinkPad X230 (Mojave & Catalina)
+macOS for ThinkPad X230
 
 ## Pre-Installation
 
-### 1. Update BIOS!!!
+### 1. Modified BIOS!!!
 
-- Modified BIOS: [Github](https://github.com/n4ru/1vyrain/)
+- A simple method to install a modified BIOS is available [here](https://github.com/n4ru/1vyrain/) (no external programmer required).
 
 ### 2. BIOS settings
 
@@ -106,9 +106,21 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 ### Patched
 
-- Copy patch to /ACPI/patched/
+- Copy patch to CLOVER/ACPI/patched/
 
 ## Issue:
+
+### CPU Power Management
+
+- Recommended additional steps to improve battery life with optimized CPU power management:
+  - Open Terminal, copy and paste the following command:
+    ```
+    curl -o ~/ssdtPRGen.sh https://raw.githubusercontent.com/Piker-Alpha/ssdtPRGen.sh/master/ssdtPRGen.sh
+    chmod +x ~/ssdtPRGen.sh
+    ./ssdtPRGen.sh
+    ```
+  - A customized SSDT.aml for your specific machine will now be in the directory /Users/yourusername/Library/ssdtPRGen
+  - Copy the file named SSDT.aml to /Volumes/EFI/EFI/CLOVER/ACPI/patched/ and restart computer
 
 ### Sound after sleep issues
 
@@ -135,4 +147,5 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
 
 - [Apple](https://www.apple.com) for macOS
 - [Acidanthera](https://github.com/acidanthera) for all the kexts/utilities that they made
-- [Rehabman](https://github.com/RehabMan/) for the patches and guides and kexts
+- [Rehabman](https://github.com/RehabMan) for the patches and guides and kexts
+- [George Kushnir](https://github.com/n4ru) for modified BIOS.
