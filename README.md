@@ -120,7 +120,7 @@ You can flash the BIOS and remove the whitelist if you plan to use Broadcom WLAN
     ./ssdtPRGen.sh
     ```
   - A customized SSDT.aml for your specific machine will now be in the directory /Users/yourusername/Library/ssdtPRGen
-  - Copy the file named SSDT.aml to /Volumes/EFI/EFI/CLOVER/ACPI/patched/ and restart computer
+  - Copy the file named SSDT.aml to /Volumes/EFI/CLOVER/ACPI/patched/ and restart computer
 
 ### Sound after sleep issues
 
